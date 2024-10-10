@@ -1,0 +1,60 @@
+<h1>Patients List</h1>
+<p>Here is the list of all registered patients.</p>
+<h2>Add New Patient</h2>
+
+<!-- Patient Form -->
+<h2>{{ isEditMode ? 'Edit' : 'Add' }} Patient</h2>
+<form (submit)="addPatient()">
+  <label>Name:</label>
+  <input [(ngModel)]="newPatient.name" name="name" required />
+
+  <label>Age:</label>
+  <input [(ngModel)]="newPatient.age" name="age" type="number" required />
+
+  <label>Gender:</label>
+  <input [(ngModel)]="newPatient.gender" name="gender" required />
+
+  <label>Contact:</label>
+  <input [(ngModel)]="newPatient.contact" name="contact" required />
+
+  <label>Address:</label>
+  <input [(ngModel)]="newPatient.address" name="address" required />
+
+  <label>Conditions:</label>
+  <input [(ngModel)]="newPatient.conditions" name="conditions" required />
+
+  <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Patient</button>
+</form>
+
+<!-- Patients List -->
+<h3>Patient List</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Condition</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patients">
+    <td>{{ patient.name }}</td>
+    <td>{{ patient.age }}</td>
+    <td>{{ patient.gender }}</td>
+    <td>{{ patient.contact }}</td>
+    <td>{{ patient.address }}</td>
+    <td>{{ patient.conditions }}</td>
+    <td>
+      <!-- Edit Button -->
+      <button (click)="editPatient(patient)">Edit</button>
+      <!-- Delete Button -->
+      <button *ngIf="patient._id" (click)="deletePatient(patient._id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+  
+  

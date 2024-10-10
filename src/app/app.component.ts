@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+import { PatientsComponent } from './patients/patients.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone: true,  // Mark as standalone component
+  imports: [CommonModule,RouterModule, HomeComponent,FontAwesomeModule, DoctorsComponent, PatientsComponent, AppointmentsComponent, HttpClientModule, FormsModule],  // Import all components
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hospital-management-frontend';
+  title = 'Hospital Management System';
 }
