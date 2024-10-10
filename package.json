@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "hospital-management-frontend",
   "version": "0.0.0",
   "scripts": {
@@ -36,5 +37,22 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
+=======
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
+>>>>>>> 07810484f92a938c9a4d4d4d8e3e5f21021b57ca
   }
 }
