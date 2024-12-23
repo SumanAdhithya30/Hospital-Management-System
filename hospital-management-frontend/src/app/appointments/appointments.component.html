@@ -1,0 +1,69 @@
+<br>
+
+<h1 class="centered-heading">Manage Appointments</h1>
+<p class="centered-paragraph">
+  Managing appointments efficiently is critical for both patients and healthcare providers.
+  Our system allows seamless scheduling and coordination, ensuring that patients receive timely care while minimizing wait times. Doctors can manage their schedules more effectively, reducing overlaps and improving the quality of consultations. By streamlining the appointment process, our platform enhances the overall patient experience and optimizes hospital resources, ensuring that each visit is purposeful and well-organized. Whether booking a routine check-up or an emergency consultation, patients can trust that their appointments are handled with the utmost care and precision.
+</p>
+
+<form (submit)="addAppointment()" class="form-container">
+  <div class="form-group">
+    <label for="patient">Patient:</label>
+    <select [(ngModel)]="newAppointment.patientId" name="patientId" required>
+      <option *ngFor="let patient of patients" [value]="patient._id">{{ patient.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="doctor">Doctor:</label>
+    <select [(ngModel)]="newAppointment.doctorId" name="doctorId" required>
+      <option *ngFor="let doctor of doctors" [value]="doctor._id">{{ doctor.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" [(ngModel)]="newAppointment.date" name="date" required />
+  </div>
+
+  <div class="form-group">
+    <label for="time">Time:</label>
+    <input type="time" [(ngModel)]="newAppointment.time" name="time" required />
+  </div>
+
+  <div class="form-group">
+    <label for="purpose">Purpose:</label>
+    <input type="text" [(ngModel)]="newAppointment.purpose" name="purpose" placeholder="Enter appointment purpose" required />
+  </div>
+
+  <button type="submit" class="submit-btn">{{ isEditMode ? 'Update' : 'Add' }} Appointment</button>
+</form>
+
+<br />
+
+<h3 class="centered-heading">Appointments List</h3>
+<table class="appointments-table">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Doctor</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Purpose</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.patientId?.name }}</td>
+      <td>{{ appointment.doctorId?.name }}</td>
+      <td>{{ appointment.date | date }}</td>
+      <td>{{ appointment.time }}</td>
+      <td>{{ appointment.purpose }}</td>
+      <td class="button-container">
+        <button class="edit-btn" (click)="editAppointment(appointment)">Edit</button>
+        <button class="delete-btn" (click)="deleteAppointment(appointment._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

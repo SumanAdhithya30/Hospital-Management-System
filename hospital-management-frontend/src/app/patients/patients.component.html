@@ -1,0 +1,97 @@
+<br>
+<h1 class="centered-heading">Patients</h1>
+<p class="centered-paragraph">At our hospital, patient comfort and well-being are our highest priorities. From the moment patients walk through our doors, they are greeted by compassionate staff and a welcoming environment. We understand that visiting a hospital can be a stressful experience, so we strive to make every interaction as smooth and pleasant as possible. Our state-of-the-art facilities are designed to provide the utmost care, with comfortable patient rooms and advanced medical technology ensuring the highest quality treatment. We offer a variety of specialized services, personalized to meet the individual needs of each patient. Our medical team takes a holistic approach, considering both physical and emotional well-being, to ensure comprehensive care. Whether it's a routine check-up or a more complex medical procedure, patients can rest assured knowing they are in capable hands, supported by a dedicated team focused on providing exceptional healthcare services.</p>
+
+<!-- Image Row -->
+<div class="image-row">
+  <img src="assets\patients\patient1.jpeg.png" alt="Comfort Image 1" class="hospital-image">
+  <img src="assets\patients\patient2.jpg" alt="Comfort Image 2" class="hospital-image">
+  <img src="assets\patients\patient3.jpg" alt="Comfort Image 3" class="hospital-image">
+</div>
+
+<p class="centered-paragraph">Our hospital is equipped with cutting-edge technology to provide patients with the most advanced medical care available. From diagnostic tools to treatment equipment, we have integrated the latest innovations to enhance the patient experience and ensure the highest standards of healthcare. Our imaging center features high-resolution MRI, CT scan, and X-ray machines that allow for accurate, fast diagnosis, reducing wait times and improving treatment outcomes. Additionally, our operating rooms are equipped with minimally invasive surgical tools and robotic systems that offer precision and reduce recovery times.
+<br>
+  We also prioritize patient monitoring and safety, utilizing state-of-the-art health monitoring systems that provide real-time updates on vital signs and health data to our medical team. This proactive approach enables faster responses to any changes in a patient’s condition, ensuring timely interventions. Our electronic health record system allows seamless access to medical history, enabling personalized care and reducing the chances of errors. For patients, this means access to faster, more accurate treatments and a more efficient healthcare experience. With continuous investments in medical technology, we are committed to offering the best in modern healthcare, all while ensuring comfort and convenience for our patients.
+</p>
+
+<!-- Patient Form -->
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Edit' : 'Add' }} Patient</h2>
+  <form (submit)="addPatient()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input [(ngModel)]="newPatient.name" name="name" required />
+    </div>
+    <div class="form-group">
+      <label>Age:</label>
+      <input [(ngModel)]="newPatient.age" name="age" type="number" required />
+    </div>
+    <div class="form-group">
+      <label>Gender:</label>
+      <input [(ngModel)]="newPatient.gender" name="gender" required />
+    </div>
+    <div class="form-group">
+      <label>Contact:</label>
+      <input [(ngModel)]="newPatient.contact" name="contact" required />
+    </div>
+    <div class="form-group">
+      <label>Address:</label>
+      <input [(ngModel)]="newPatient.address" name="address" required />
+    </div>
+    <div class="form-group">
+      <label>Conditions:</label>
+      <input [(ngModel)]="newPatient.conditions" name="conditions" required />
+    </div>
+    <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Patient</button>
+  </form>
+</div>
+
+<!-- Patients Table -->
+<h3 class="centered-heading">Patient List</h3>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Condition</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{ patient.name }}</td>
+      <td>{{ patient.age }}</td>
+      <td>{{ patient.gender }}</td>
+      <td>{{ patient.contact }}</td>
+      <td>{{ patient.address }}</td>
+      <td>{{ patient.conditions }}</td>
+      <td class="button-container">
+        <button class="edit-button" (click)="editPatient(patient)">Edit</button>
+        <button class="delete-button" (click)="deletePatient(patient._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Feedback Section -->
+<h2 class="centered-heading">Feel Free to Write Us</h2>
+<p class="centered-paragraph">We value the feedback of our patients and strive to continuously improve our services based on their experiences. Here are some of the wonderful reviews from our satisfied patients:</p>
+
+<!-- Feedback Cards -->
+<div class="feedback-cards">
+  <div class="feedback-card">
+    <p>"The staff was incredibly kind and made me feel comfortable throughout my stay. I appreciate the care I received and highly recommend this hospital!"</p>
+    <h4>- Sarah J.</h4>
+  </div>
+  <div class="feedback-card">
+    <p>"Excellent service! The doctors are highly professional, and the facility is top-notch. I'm grateful for the treatment I got."</p>
+    <h4>- David R.</h4>
+  </div>
+  <div class="feedback-card">
+    <p>"Great experience! The medical technology here is advanced, and the nurses were attentive to all my needs. Thank you for the wonderful care!"</p>
+    <h4>- Emily W.</h4>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<br>
+
+<h1 class="centered-heading">Doctors</h1>
+<p class="centered-paragraph">Doctors play a crucial role in society by safeguarding our health and well-being. They are highly trained professionals who diagnose, treat, and prevent illnesses, ensuring that individuals lead healthy and fulfilling lives. Beyond medical expertise, doctors provide emotional support and guidance to patients, offering comfort during times of illness. Their commitment to saving lives, alleviating pain, and promoting health makes them vital in every community. Doctors are not just caregivers but also advocates for public health, pushing for advances in medicine and public health awareness to improve the quality of life for everyone.</p>
+
+<!-- Section: Banner with image and specialization -->
+<div class="doctor-banner">
+  <img src="assets/doctors.jpg" alt="Doctor Image" class="doctor-image">
+  <div class="specialization-info">
+    <h2 class="specialization-heading">Specializations</h2>
+    <ul>
+      <li>
+        <strong>Cardiology:</strong> Specializing in heart health, diagnosing and treating heart diseases.
+      </li>
+      <li>
+        <strong>Neurology:</strong> Focusing on the brain and nervous system disorders.
+      </li>
+      <li>
+        <strong>Pediatrics:</strong> Providing medical care for children from birth to adolescence.
+      </li>
+      <li>
+        <strong>Orthopedics:</strong> Specializing in the treatment of bones, joints, and muscles.
+      </li>
+      <li>
+        <strong>Gynecology:</strong> Specializing in the treatment of women’s reproductive health and pregnancy care.
+      </li>
+      <li>
+        <strong>Nephrology:</strong>Specializing in the treatment of kidney diseases and disorders related to renal function.
+      </li>
+      <li>
+        <strong>And many more...</strong> Our hospital offers various other specializations.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section: About hospital's high-tech doctors -->
+<div class="hospital-info">
+  <h2 class="centered-heading">Our High-Tech Doctors</h2>
+  <p>"Our doctors are the cornerstone of our hospital, embodying the highest standards of medical practice and patient care. With years of extensive education, specialized training, and hands-on experience, each of our medical professionals brings a wealth of knowledge and compassion to every patient interaction. Whether it's a routine checkup or a complex medical condition, our doctors are committed to providing top-notch care, leveraging the latest in medical technology and evidence-based treatments.
+
+    At our hospital, we emphasize a holistic approach to healthcare, where the well-being of the patient is the priority. Our doctors are not only experts in their fields, but they are also compassionate individuals who understand the emotional and psychological impact of illness. They take the time to listen to their patients, provide clear explanations, and develop personalized care plans to ensure the best possible outcomes.
+  <br>
+    Furthermore, our hospital embraces innovation and cutting-edge medical research to ensure our doctors have access to the most advanced treatments and diagnostic tools available. Our team works closely together, ensuring collaboration across various specializations to provide comprehensive, coordinated care. With a patient-centered philosophy, our doctors are at the forefront of medical excellence, committed to improving lives and promoting health across the community."</p>
+</div>
+
+<div class="patrons-section">
+  <h2>Patrons of Our Hospital</h2>
+  <div class="patron-cards">
+    <div class="patron-card">
+      <h4>Founder</h4>
+      <p><strong>Dr. John Smith</strong></p>
+      <p><strong>Role:</strong> Established the hospital with a vision to provide world-class healthcare.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Director</h4>
+      <p><strong>Dr. Susan Lee</strong></p>
+      <p><strong>Role:</strong> Leading the hospital towards innovative medical treatments and management.</p>
+    </div>
+    <div class="patron-card">
+      <h4>President</h4>
+      <p><strong>Mr. Richard Miles</strong></p>
+      <p><strong>Role:</strong> Overseeing administrative excellence and healthcare strategy.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Dean</h4>
+      <p><strong>Dr. Patricia Clark</strong></p>
+      <p><strong>Role:</strong> Head of academic medical programs and training.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Medical Director</h4>
+      <p><strong>Dr. Andrew Davis</strong></p>
+      <p><strong>Role:</strong> Ensures the highest medical standards across all departments.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Chief of Surgery</h4>
+      <p><strong>Dr. Emma Wilson</strong></p>
+      <p><strong>Role:</strong> Leading complex surgical procedures and guiding the surgical teams.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Head of Pediatrics</h4>
+      <p><strong>Dr. Sarah Evans</strong></p>
+      <p><strong>Role:</strong> Specialized in pediatric healthcare and child treatment protocols.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Head of Cardiology</h4>
+      <p><strong>Dr. Michael Brown</strong></p>
+      <p><strong>Role:</strong> Manages cardiac care and ensures excellence in heart disease treatment.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Chief Financial Officer</h4>
+      <p><strong>Mr. George Taylor</strong></p>
+      <p><strong>Role:</strong> Overseeing financial health and sustainability of the hospital.</p>
+    </div>
+    <div class="patron-card">
+      <h4>Chief Operating Officer</h4>
+      <p><strong>Ms. Laura Wilson</strong></p>
+      <p><strong>Role:</strong> Ensuring smooth daily operations and strategic development of the hospital.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Section: CRUD Operations -->
+<div class="crud-section">
+  
+  <!-- Form Section with background box and centered form -->
+  <div class="form-container">
+    <h2 class="centered-heading">{{ isEditMode ? 'Edit' : 'Add' }} Doctor</h2>
+    <form (ngSubmit)="addDoctor()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="newDoctor.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" [(ngModel)]="newDoctor.specialization" name="specialization" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" [(ngModel)]="newDoctor.contact" name="contact" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="newDoctor.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" [(ngModel)]="newDoctor.address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience (in years):</label>
+        <input type="number" id="experience" [(ngModel)]="newDoctor.experience" name="experience" required>
+      </div>
+      <button class="form-submit" type="submit">{{ isEditMode ? 'Update' : 'Add' }} Doctor</button>
+    </form>
+  </div>
+
+  <br>
+  <h3 class="centered-heading">List of Doctors</h3>
+  <!-- Display Doctors in Card Format -->
+  <div class="doctor-cards">
+    <div class="doctor-card" *ngFor="let doctor of doctors">
+      <h4>{{ doctor.name }}</h4>
+      <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+      <p><strong>Experience:</strong> {{ doctor.experience }} years</p>
+      <div class="button-container">
+        <button (click)="editDoctor(doctor)">Edit</button>
+        <button *ngIf="doctor._id" (click)="deleteDoctor(doctor._id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

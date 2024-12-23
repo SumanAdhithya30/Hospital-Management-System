@@ -1,0 +1,275 @@
+/* General Styles */
+.home-container {
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('/assets/homepage/hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+.hero h1, .hero p, .cta-button {
+    position: relative; /* Position the text above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Increase font size for better visibility */
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.hero p {
+    font-size: 1.8em; /* Increase font size for better visibility */
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s; /* Transition for scale effect */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: darkslateblue;
+}
+
+
+/* Button styling */
+/* .cta-button {
+    padding: 12px 30px; 
+    background-color: #1976D2;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: darkslateblue;
+} */
+
+/* Hospital Info Section */
+.hospital-info {
+    display: flex;
+    margin-top: 40px;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.features-section {
+    flex: 1;
+}
+
+.address {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* High-Tech Labs Section */
+.high-tech-labs {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background color */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.high-tech-labs h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.high-tech-labs p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.lab-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.lab-images img {
+    width: 30%; /* Adjust width as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Space between images */
+}
+
+
+/* Dashboard Section */
+.dashboard {
+    margin-top: 40px;
+    background-color: #e6f7ff; /* Soft blue color for the background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dashboard-h2{
+    text-align: center;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.stat i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: darkslateblue;
+}
+
+.stat p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Additional Features Section */
+.additional-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* News Section */
+.news {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.news-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Information Section */
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.contact-details i {
+    margin-right: 10px;
+}
+
+.contact-details .fas, .contact-details .fab {
+    color: #007BFF;
+    font-size: 1.5em;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cta-section .cta-button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    background-color: #1976D2;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-section .cta-button:hover {
+    background-color: darkslateblue;
+}
+
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Apply animation to elements */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards; /* 0.8 seconds duration */
+}
+
+/* Optional: Delay for staggered effect */
+.fade-in-delay {
+    animation-delay: 0.2s; /* Delay to stagger elements */
+}
