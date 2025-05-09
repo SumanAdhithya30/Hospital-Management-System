@@ -1,6 +1,7 @@
 # 🏥 Hospital Management System
-![Hospital Banner](https://cdn.dribbble.com/users/563824/screenshots/4593751/medical-ai.gif)
-
+<p align="center">
+  <img src="https://i.pinimg.com/originals/b4/a9/49/b4a94939db54040952bc3d98db1db817.gif" alt="Hospital Management Banner" width="800"/>
+</p>
 ## 📌 Overview
 The **Hospital Management System (HMS)** is a full-stack web application designed to streamline hospital operations and enhance patient care. This system allows hospitals to **manage patients, doctors, appointments, and medical records** efficiently through a centralized, intuitive interface. Developed using **Node.js, Express.js, MongoDB, and React.js**, this project demonstrates a robust and scalable solution for modern healthcare institutions.
 
