@@ -1,5 +1,8 @@
 # 🏥 Hospital Management System
-  <img src="[[https://camo.githubusercontent.com/3492228fd9a698d24cbe02d7e013abc0fe70eebeda013e47dab443f61efe5013/68747470733a2f2f7777772e77696e677374656368736f6c7574696f6e732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032322f30332f66756c6c2d737461636b2d646576656c6f706d656e742e676966](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F4593751-Medical-AI-animated&psig=AOvVaw3gt2aRQawqBu-L35R8g7_v&ust=1746904229451000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKCshMKLl40DFQAAAAAdAAAAABAE)](https://cdn.dribbble.com/userupload/23002793/file/original-3f028f30f7f023f692a0d341f2ca3741.gif)" alt="GIF Description">
+
+  <p align="center">
+  <img src="https://camo.githubusercontent.com/3492228fd9a698d24cbe02d7e013abc0fe70eebeda013e47dab443f61efe5013/68747470733a2f2f7777772e77696e677374656368736f6c7574696f6e732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032322f30332f66756c6c2d737461636b2d646576656c6f706d656e742e676966" alt="GIF Description">
+</p>
 
 ## 📌 Overview
 The **Hospital Management System (HMS)** is a full-stack web application designed to streamline hospital operations and enhance patient care. This system allows hospitals to **manage patients, doctors, appointments, and medical records** efficiently through a centralized, intuitive interface. Developed using **Node.js, Express.js, MongoDB, and React.js**, this project demonstrates a robust and scalable solution for modern healthcare institutions.
